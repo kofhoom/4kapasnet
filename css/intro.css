@@ -1,0 +1,582 @@
+:root {
+    --test-color: #fff;
+    --main-color: #2a2a2a;
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 100%;
+    font-family: sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+
+
+
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    background: black;
+
+
+}
+
+.background {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+
+
+}
+
+.wrap {
+    margin: 10vh auto;
+    max-width: 140vh;
+    height: 80vh;
+    position: relative;
+}
+
+
+
+
+
+.background .img1 {
+
+    position: absolute;
+    width: 100%;
+    background: url('../img/bwallcenter1.png') no-repeat center center / 100% 100%;
+    z-index: 5;
+    animation: dropshadow1 1s infinite;
+
+
+}
+
+
+
+.background .img2 {
+    position: absolute;
+    z-index: 4;
+    width: 100%;
+
+    background: url('../img/bwalltop2.png') no-repeat center center / 100% 100%;
+    animation: dropshadow1 1s infinite;
+}
+
+
+.background .img3 {
+    position: absolute;
+    z-index: 3;
+    width: 100%;
+
+    background: url('../img/bwallleft3.png') no-repeat center center / 100% 100%;
+    animation: dropshadow1 1s infinite;
+
+
+}
+
+.background .img4 {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+
+    background: url('../img/bwallright4.png') no-repeat center center / 100% 100%;
+    animation: dropshadow1 1s infinite;
+}
+
+.background .img5 {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+
+    background: url('../img/bwallbottom5.png') no-repeat center center / 100% 100%;
+    animation: dropshadow1 1s infinite;
+}
+
+.mainpng {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+
+}
+
+
+/*desk*/
+.desk {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    animation: dropshadow1 1s infinite;
+}
+
+.desk img {
+
+    position: absolute;
+    height: 100%;
+
+    width: 100%;
+
+}
+
+
+.mainpng .maintvbox {
+
+
+
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+}
+
+
+
+.mainpng .maintvbox .tv.off {
+
+    /*transform: translateY(-50%);*/
+    width: 100%;
+    height: 100%;
+    background-position: center center;
+    background: url(../img/oldmoniter_off2.png) no-repeat center center/ 100% 100%;
+
+    position: absolute;
+
+}
+
+.mainpng .maintvbox .tv {
+
+
+    height: 100%;
+    animation: dropshadow2 1s infinite;
+
+}
+
+.mainpng .maintvbox .tv.on {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-position: center center;
+
+    background: url(../img/oldmoniter2.png) no-repeat center center / 100% 100%;
+}
+
+
+.mainpng .maintvbox .signal {
+    position: absolute;
+    top: -23.2%;
+    width: 100%;
+    height: 100%;
+
+
+    display: -webkit-box;
+
+}
+
+.mainpng .maintvbox .signal .img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+
+    z-index: -1;
+    background: url(../img/tvmaincolor.gif) no-repeat;
+    background-position: center center;
+    background-size: 17% 30.1%;
+    margin: auto;
+}
+
+.mainpng .maintvbox .tv {
+    position: relative;
+    z-index: 2;
+}
+
+
+
+.vhs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #fff;
+    text-align: center;
+    will-change: text-shadow;
+    opacity: 0;
+    font-size: 1.2rem;
+    z-index: 999999;
+    position: absolute;
+    top: 35%;
+    left: 41.5%;
+    width: 17%;
+    height: 30.1%;
+}
+
+
+/*gradient*/
+
+.mainpng .maintvbox .signal::before {
+    z-index: 4;
+
+    display: block;
+    content: '';
+    /*    font-size: 30px;*/
+
+
+    position: absolute;
+    top: 35%;
+    left: 41.5%;
+    width: 17%;
+    height: 30.1%;
+
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15) 13%, transparent 18%, transparent 35%, transparent 38%, transparent 50%, transparent 70%, rgba(0, 0, 0, 0.15) 85%, rgba(0, 0, 0, 0.15) 95%, rgba(0, 0, 0, 0.15) 100%),
+        linear-gradient(to left, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0)),
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15) 10%, transparent 30%, transparent 60%, rgba(0, 0, 0, 0.15) 92%, rgba(0, 0, 0, 0.15) 98%),
+        linear-gradient(to left, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0)),
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15) 10%, transparent 30%, transparent 60%, rgba(0, 0, 0, 0.15) 95%, rgba(0, 0, 0, 0.15) 100%);
+}
+
+
+/*remote sub*/
+.subfakebutton {
+    width: 100%;
+    background: var(--main-color);
+    text-align: center;
+
+
+}
+
+.subfakebutton ul {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    padding: 1rem;
+
+}
+
+.subfakebutton ul li {
+    /* offset-x | offset-y | blur-radius | spread-radius | color */
+
+    width: 45px;
+    margin: 5px;
+    font-weight: bold;
+    color: #fff;
+    font-size: 12px;
+    letter-spacing: 0.1px;
+    padding: 3px 1px;
+    border-radius: 8px;
+    /*    background: #2a2a2a;*/
+    background: var(--main-color);
+    display: inline-block;
+    line-height: 1.6;
+}
+
+.subfakebutton ul li:nth-child(1) {
+    box-shadow: 2px 3px 3px 1px black;
+}
+
+.subfakebutton ul li:nth-child(2) {
+    box-shadow: 0px 3px 3px 1px black;
+}
+
+.subfakebutton ul li:nth-child(3) {
+    box-shadow: 0px 3px 3px 1px black;
+}
+
+.subfakebutton ul li:nth-child(4) {
+    box-shadow: -2px 3px 3px 1px black;
+}
+
+/*remote sub2*/
+.mainbutton {
+    border-radius: 40% / 40%;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    width: 100%;
+    display: flex;
+    height: 50px;
+    justify-content: space-between;
+    background: var(--main-color);
+    align-items: center;
+    padding: 0 21px;
+}
+
+.mainbutton button {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 0;
+    outline: none;
+    color: #fff;
+    background: #e7260f;
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.mainbutton button:nth-child(1):active {
+    color: #e2e2e2;
+    cursor: none;
+    box-shadow: inset 0 0 .95em black;
+
+}
+
+.mainbutton button:nth-child(2):active {
+    color: #e2e2e2;
+
+    box-shadow: inset 0 0 .95em black;
+}
+
+.mainbutton button:nth-child(1) {
+    background: #e7260f;
+    box-shadow: 0.01em 3px 2px 0.15em black;
+    cursor: none;
+}
+
+.mainbutton button:nth-child(2) {
+
+    box-shadow: -0.01em 3px 2px 0.15em black;
+}
+
+
+
+.rounddiv {
+
+
+    display: inline-block;
+
+    text-align: center;
+    width: 100%;
+    height: 50px;
+    background-color: transparent;
+}
+
+/*remote body*/
+.remote {
+opacity: 1;
+    overflow: hidden;
+    border-radius: 50% / 5%;
+    background: var(--main-color);
+    position: fixed;
+    width: 15rem;
+    height: 25rem;
+    z-index: 11111;
+}
+
+.remote::before {
+
+    z-index: 0;
+
+    display: block;
+    content: '';
+    right: 0px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: .8;
+
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15) 13%, transparent 18%, transparent 35%, transparent 38%, transparent 50%, transparent 70%, rgba(0, 0, 0, 0.15) 85%, rgba(0, 0, 0, 0.15) 95%, rgba(0, 0, 0, 0.15) 100%),
+        linear-gradient(to left, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15) 13%, transparent 18%, transparent 35%, transparent 38%, transparent 50%, transparent 70%, rgba(0, 0, 0, 0.15) 85%, rgba(0, 0, 0, 0.15) 95%, rgba(0, 0, 0, 0.15) 100%), linear-gradient(to left, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0)), linear-gradient(to right, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0)),
+
+
+        linear-gradient(to top, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15) 10%, transparent 30%, transparent 60%, rgba(0, 0, 0, 0.15) 92%, rgba(0, 0, 0, 0.15) 98%),
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15) 10%, transparent 30%, transparent 60%, rgba(0, 0, 0, 0.15) 95%, rgba(0, 0, 0, 0.15) 100%);
+}
+
+/*remote num*/
+.numbox {
+
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    background: var(--main-color);
+    flex-direction: column;
+}
+
+.numbox .numbutton {
+    width: 100%;
+
+}
+
+.numbox .numbutton ul {
+    width: 100%;
+    justify-content: center;
+    display: flex;
+}
+
+.numbox .numbutton ul li {
+    width: 3rem;
+    margin: 0.6rem;
+    justify-content: center;
+    display: flex;
+    font-size: 20px;
+    color: #fff;
+    background: var(--main-color);
+    line-height: 1.2;
+}
+
+.numbox .numbutton ul li:nth-child(1) {
+    border-radius: 1rem 5px 5px 1rem;
+    box-shadow: 2px 3px 3px 1px black;
+}
+
+.numbox .numbutton ul li:nth-child(2) {
+    border-radius: 5px;
+    box-shadow: 0px 3px 3px 1px black;
+}
+
+.numbox .numbutton ul li:nth-child(3) {
+    border-radius: 5px 1rem 1rem 5px;
+    box-shadow: -2px 3px 3px 1px black;
+}
+
+
+
+/*addclass*/
+.show {
+
+    /*    transition: 2s all;*/
+    animation: appear 2s ease;
+    /*    animation-direction: 3s;*/
+    animation-fill-mode: forwards;
+}
+
+.show2 {
+    transition: opacity 1s;
+    opacity: 1;
+    transition-delay: 1.2s;
+
+    animation-fill-mode: forwards;
+    animation: rgbText 2s steps(9) 0s infinite alternate;
+}
+
+/*keyfreames*/
+@keyframes appear {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes rgbText {
+    0% {
+        text-shadow: -1px 1px 8px rgba(255, 255, 255, 0.6), 1px -1px 8px rgba(255, 255, 235, 0.7), 0px 0 1px rgba(251, 0, 231, 0.8), 0 0px 3px rgba(0, 233, 235, 0.8), 0px 0 3px rgba(0, 242, 14, 0.8), 0 0px 3px rgba(244, 45, 0, 0.8), 0px 0 3px rgba(59, 0, 226, 0.8);
+    }
+
+    25% {
+        text-shadow: -1px 1px 8px rgba(255, 255, 255, 0.6), 1px -1px 8px rgba(255, 255, 235, 0.7), 0px 0 1px rgba(251, 0, 231, 0.8), 0 0px 3px rgba(0, 233, 235, 0.8), 0px 0 3px rgba(0, 242, 14, 0.8), 0 0px 3px rgba(244, 45, 0, 0.8), 0px 0 3px rgba(59, 0, 226, 0.8);
+    }
+
+    45% {
+        text-shadow: -1px 1px 8px rgba(255, 255, 255, 0.6), 1px -1px 8px rgba(255, 255, 235, 0.7), 5px 0 1px rgba(251, 0, 231, 0.8), 0 5px 1px rgba(0, 233, 235, 0.8), -5px 0 1px rgba(0, 242, 14, 0.8), 0 -5px 1px rgba(244, 45, 0, 0.8), 5px 0 1px rgba(59, 0, 226, 0.8);
+    }
+
+    50% {
+        text-shadow: -1px 1px 8px rgba(255, 255, 255, 0.6), 1px -1px 8px rgba(255, 255, 235, 0.7), -5px 0 1px rgba(251, 0, 231, 0.8), 0 -5px 1px rgba(0, 233, 235, 0.8), 5px 0 1px rgba(0, 242, 14, 0.8), 0 5px 1px rgba(244, 45, 0, 0.8), -5px 0 1px rgba(59, 0, 226, 0.8);
+    }
+
+    55% {
+        text-shadow: -1px 1px 8px rgba(255, 255, 255, 0.6), 1px -1px 8px rgba(255, 255, 235, 0.7), 0px 0 3px rgba(251, 0, 231, 0.8), 0 0px 3px rgba(0, 233, 235, 0.8), 0px 0 3px rgba(0, 242, 14, 0.8), 0 0px 3px rgba(244, 45, 0, 0.8), 0px 0 3px rgba(59, 0, 226, 0.8);
+    }
+
+    90% {
+        text-shadow: -1px 1px 8px rgba(255, 255, 255, 0.6), 1px -1px 8px rgba(255, 255, 235, 0.7), -5px 0 1px rgba(251, 0, 231, 0.8), 0 5px 1px rgba(0, 233, 235, 0.8), 5px 0 1px rgba(0, 242, 14, 0.8), 0 -5px 1px rgba(244, 45, 0, 0.8), 5px 0 1px rgba(59, 0, 226, 0.8);
+    }
+
+    100% {
+        text-shadow: -1px 1px 8px rgba(255, 255, 255, 0.6), 1px -1px 8px rgba(255, 255, 235, 0.7), 5px 0 1px rgba(251, 0, 231, 0.8), 0 -5px 1px rgba(0, 233, 235, 0.8), -5px 0 1px rgba(0, 242, 14, 0.8), 0 5px 1px rgba(244, 45, 0, 0.8), -5px 0 1px rgba(59, 0, 226, 0.8);
+    }
+}
+
+@keyframes show2 {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes dropshadow1 {
+    50% {
+        filter: drop-shadow(20px 20px 105px black);
+        filter: brightness(1.5);
+    }
+}
+
+@keyframes dropshadow2 {
+    50% {
+
+
+        filter: drop-shadow(0px 30px 105px rgba(252, 0, 0, 0.3));
+
+    }
+}
+
+/*반응형*/
+
+@media (max-width: 1350px) {
+
+
+    .wrap {
+        margin: 20vh auto;
+        max-width: 110vh;
+        height: 60vh;
+        position: relative;
+    }
+}
+
+
+
+@media (max-width: 1059px) {
+    body {
+        background: black;
+    }
+
+    .wrap {
+        margin: 25vh auto;
+        max-width: 80vh;
+        height: 50vh;
+        position: relative;
+    }
+}
+
+
+@media (max-width: 759px) {
+    body {
+        background: black;
+
+    }
+
+    .wrap {
+        margin: 30vh auto;
+        max-width: 100vh;
+        height: 40vh;
+        position: relative;
+
+    }
+
+
+    .vhs {
+
+        font-size: .8rem;
+        line-height: 1.5;
+    }
+
+    .remote {
+        opacity: 0;
+    }
+
+
+}

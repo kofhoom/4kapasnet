@@ -1,0 +1,280 @@
+body {
+    position: fixed;
+    display: -webkit-box;
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+#menu {
+    margin: auto;
+    width: 100%;
+    max-width: 1024px;
+    height: 800px;
+}
+
+#menu .container {
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: flex;
+    -webkit-animation-delay: 0.5s;
+    animation-delay: 0.5s;
+    -webkit-animation: extend 3s ease;
+    animation: extend 4s ease;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+
+}
+
+#menu p {
+    padding: 10px;
+    position: relative;
+    z-index: 9999;
+}
+
+#menu .container .item {
+    width: 100%;
+    cursor: -webkit-grab;
+    cursor: grab;
+}
+
+#menu .container .item.white {
+    background: #FBFBFB;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+#menu .container .item.yellow {
+    background: #FECD09;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+#menu .container .item.cyan {
+    background: #04CCFE;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+#menu .container .item.green {
+    background: #00D201;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+#menu .container .item.magenta {
+    background: #D300A6;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+#menu .container .item.red {
+    background: #D40202;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+#menu .container .item.blue {
+    background: #0101FE;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+#menu .container .item.puple {
+    background: #660099;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+#menu .container .item.orange {
+    background: #fb5d17;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+#gif {
+    width: 450px;
+    height: 450px;
+    display: -webkit-box;
+    display: flex;
+    position: absolute;
+    pointer-events: none;
+    display: flex;
+
+}
+
+#gif .container {
+    width: 100%;
+    margin: auto;
+    z-index: 9;
+}
+
+@-webkit-keyframes appear {
+    from {
+        height: 0%;
+    }
+
+    to {
+        height: 100%;
+    }
+}
+
+@keyframes appear {
+    from {
+        height: 0%;
+    }
+
+    to {
+        height: 100%;
+    }
+}
+
+@-webkit-keyframes disappear {
+    from {
+        height: 100%;
+    }
+
+    to {
+        height: 0%;
+    }
+}
+
+@keyframes disappear {
+    from {
+        height: 100%;
+    }
+
+    to {
+        height: 0%;
+    }
+}
+
+
+
+@keyframes extend {
+    0% {
+        height: 0%;
+
+    }
+
+    100% {
+        height: 100%;
+
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        display: -webkit-box;
+        display: block;
+        width: 100vw;
+        position: relative;
+        overflow: auto;
+    }
+
+    .box1 p {
+        cursor: pointer;
+        text-align: center;
+        color: #fff;
+        height: 90px;
+        font-size: 5vw;
+        line-height: 90px;
+    }
+
+    #menu .container {
+        display: block !important;
+    }
+
+    .content1 {
+        display: block;
+    }
+
+    #menu {
+        margin-top: 50px;
+        width: 100%;
+        max-width: 1024px;
+        height: 800px;
+    }
+
+    .vhs.con {
+
+        width: 119px;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        cursor: pointer;
+        align-items: center;
+        color: #fff;
+
+        position: relative;
+
+        top: 0px;
+        z-index: 97;
+        font-size: 15px;
+    }
+
+
+    @keyframes extend {
+        from {
+            width: 0%;
+
+        }
+
+        to {
+            width: 100%;
+
+        }
+    }
+
+    #gif {
+        width: 350px;
+        height: 350px;
+        display: -webkit-box;
+        display: flex;
+        position: absolute;
+        pointer-events: none;
+        display: flex;
+    }
+
+    .lines {
+        position: fixed;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 100vw;
+        height: 100%;
+        pointer-events: none;
+        z-index: 98;
+        opacity: 0.6;
+        will-change: opacity;
+        animation: opacity 3s linear infinite;
+    }
+
+    .content1 {
+        z-index: 0;
+
+        background-image: url("https://web.archive.org/web/20091027082040/http://hk.geocities.com/twins123abc/images/bk/star-blue.gif");
+        background-size: auto;
+        left: 0px;
+        right: 0px;
+        bottom: 0;
+        top: 0px;
+        will-change: transform;
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+
+
+    }
+
+    .submenu ul {
+
+        display: -webkit-inline-flex;
+        display: -moz-inline-flex;
+        display: -ms-inline-flex;
+        display: -o-inline-flex;
+        display: inline-flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 15px;
+        width: 100%;
+        line-height: 1.5;
+
+    }
+}

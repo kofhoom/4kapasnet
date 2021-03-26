@@ -1,0 +1,256 @@
+body {
+
+    font-family: Verdana;
+
+}
+
+
+body {
+    width: 100%;
+    background: black;
+    overflow: hidden;
+    position: relative;
+}
+
+.content1 {
+    z-index: 0;
+
+    background-image: url("https://web.archive.org/web/20091027082040/http://hk.geocities.com/twins123abc/images/bk/star-blue.gif");
+    background-size: auto;
+    left: -40100px;
+    top: -1020px;
+    will-change: transform;
+    width: 10000%;
+    height: 10000%;
+    position: absolute;
+    animation: rotate_image 15700s linear infinite;
+    transform-origin: 50% 50%;
+}
+
+
+@keyframes rotate_image {
+
+    100% {
+
+        transform: rotate(360deg);
+    }
+}
+
+.lolcenter {
+    text-align: center;
+}
+
+.lolcenter img {
+    width: 250px;
+}
+
+a:link {
+    color: lightgray;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:visited {
+    color: lightgray;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:hover {
+    color: white;
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+a:active {
+    color: steelblue;
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+.box1 {
+    position: relative;
+    z-index: 1;
+    margin: 0 auto;
+
+
+    width: 200px;
+
+}
+
+.box1 p {
+    cursor: pointer;
+    text-align: center;
+    color: #fff;
+    font-size: 1vw;
+}
+
+.lines {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 98;
+    opacity: 0.6;
+    will-change: opacity;
+    animation: opacity 3s linear infinite;
+}
+
+.lines:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    background: linear-gradient(to bottom, transparent 50%, rgba(0, 0, 0, .5) 51%);
+    background-size: 100% 4px;
+    will-change: background, background-size;
+    animation: scanlines 0.2s linear infinite;
+}
+
+@keyframes opacity {
+    0% {
+        opacity: 0.6;
+    }
+
+    20% {
+        opacity: 0.3;
+    }
+
+    35% {
+        opacity: 0.5;
+    }
+
+    50% {
+        opacity: 0.8;
+    }
+
+    60% {
+        opacity: 0.4;
+    }
+
+    80% {
+        opacity: 0.7;
+    }
+
+    100% {
+        opacity: 0.6;
+    }
+}
+
+@keyframes scanlines {
+    from {
+        background: linear-gradient(to bottom, transparent 50%, rgba(0, 0, 0, .5) 51%);
+        background-size: 100% 4px;
+    }
+
+    to {
+        background: linear-gradient(to bottom, rgba(0, 0, 0, .5) 50%, transparent 51%);
+        background-size: 100% 4px;
+    }
+}
+
+.wrap {
+    width: 100%;
+}
+
+.box1 .container p span {
+    opacity: 1;
+    position: relative;
+    transition: all 1s;
+
+}
+
+.submenu ul {
+    text-align: center;
+    width: 100%;
+    height: 2rem;
+    margin-bottom: 5px;
+}
+
+.vhs.main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 50px;
+
+}
+
+.vhs.main a {
+
+    display: inline-block;
+    vertical-align: middle;
+
+}
+
+.vhs {
+
+    cursor: pointer;
+    text-align: center;
+    color: #fff;
+    /*    width: 100%;*/
+    position: relative;
+    /*height: 100px;*/
+    top: 25px;
+    z-index: 97;
+    will-change: text-shadow;
+    animation: rgbText 2s steps(9) 0s infinite alternate;
+    font-size: 30px;
+
+
+}
+
+.vhs.con {
+
+    vertical-align: middle;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+    color: #fff;
+    /*    vertical-align: middle;*/
+    height: 50px;
+    width: 20%;
+    position: relative;
+    height: 0px;
+    top: 0px;
+    z-index: 97;
+    font-size: 15px;
+}
+
+
+
+@keyframes rgbText {
+    0% {
+        text-shadow: -1px 1px 8px rgba(255, 255, 255, 0.6), 1px -1px 8px rgba(255, 255, 235, 0.7), 0px 0 1px rgba(251, 0, 231, 0.8), 0 0px 3px rgba(0, 233, 235, 0.8), 0px 0 3px rgba(0, 242, 14, 0.8), 0 0px 3px rgba(244, 45, 0, 0.8), 0px 0 3px rgba(59, 0, 226, 0.8);
+    }
+
+    25% {
+        text-shadow: -1px 1px 8px rgba(255, 255, 255, 0.6), 1px -1px 8px rgba(255, 255, 235, 0.7), 0px 0 1px rgba(251, 0, 231, 0.8), 0 0px 3px rgba(0, 233, 235, 0.8), 0px 0 3px rgba(0, 242, 14, 0.8), 0 0px 3px rgba(244, 45, 0, 0.8), 0px 0 3px rgba(59, 0, 226, 0.8);
+    }
+
+    45% {
+        text-shadow: -1px 1px 8px rgba(255, 255, 255, 0.6), 1px -1px 8px rgba(255, 255, 235, 0.7), 5px 0 1px rgba(251, 0, 231, 0.8), 0 5px 1px rgba(0, 233, 235, 0.8), -5px 0 1px rgba(0, 242, 14, 0.8), 0 -5px 1px rgba(244, 45, 0, 0.8), 5px 0 1px rgba(59, 0, 226, 0.8);
+    }
+
+    50% {
+        text-shadow: -1px 1px 8px rgba(255, 255, 255, 0.6), 1px -1px 8px rgba(255, 255, 235, 0.7), -5px 0 1px rgba(251, 0, 231, 0.8), 0 -5px 1px rgba(0, 233, 235, 0.8), 5px 0 1px rgba(0, 242, 14, 0.8), 0 5px 1px rgba(244, 45, 0, 0.8), -5px 0 1px rgba(59, 0, 226, 0.8);
+    }
+
+    55% {
+        text-shadow: -1px 1px 8px rgba(255, 255, 255, 0.6), 1px -1px 8px rgba(255, 255, 235, 0.7), 0px 0 3px rgba(251, 0, 231, 0.8), 0 0px 3px rgba(0, 233, 235, 0.8), 0px 0 3px rgba(0, 242, 14, 0.8), 0 0px 3px rgba(244, 45, 0, 0.8), 0px 0 3px rgba(59, 0, 226, 0.8);
+    }
+
+    90% {
+        text-shadow: -1px 1px 8px rgba(255, 255, 255, 0.6), 1px -1px 8px rgba(255, 255, 235, 0.7), -5px 0 1px rgba(251, 0, 231, 0.8), 0 5px 1px rgba(0, 233, 235, 0.8), 5px 0 1px rgba(0, 242, 14, 0.8), 0 -5px 1px rgba(244, 45, 0, 0.8), 5px 0 1px rgba(59, 0, 226, 0.8);
+    }
+
+    100% {
+        text-shadow: -1px 1px 8px rgba(255, 255, 255, 0.6), 1px -1px 8px rgba(255, 255, 235, 0.7), 5px 0 1px rgba(251, 0, 231, 0.8), 0 -5px 1px rgba(0, 233, 235, 0.8), -5px 0 1px rgba(0, 242, 14, 0.8), 0 5px 1px rgba(244, 45, 0, 0.8), -5px 0 1px rgba(59, 0, 226, 0.8);
+    }
+}
